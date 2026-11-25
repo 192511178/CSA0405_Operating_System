@@ -1,0 +1,20 @@
+locked_memory.c: In function 'main':
+locked_memory.c:19:2: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+   19 |  if(lock)munlock((void*)p,n);munmap((void*)p,n);return 0;
+      |  ^~
+locked_memory.c:19:30: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   19 |  if(lock)munlock((void*)p,n);munmap((void*)p,n);return 0;
+      |                              ^~~~~~
+UNLOCKED
+mode=unlocked iterations=10000 max_loop_ns=2536374 mean_loop_ns=22031
+LOCKED
+mode=mlock iterations=10000 max_loop_ns=2831037 mean_loop_ns=17449
+Memory budget (MiB)
+real_time_control_locked        128
+machine_learning               1536
+logging                         128
+OS_and_services                 256
+Total: 2048 MiB of 2048 MiB
+Fourth task 500 MiB: total 2548 MiB; exceeds RAM by 500 MiB
+Decision: reserve/lock control memory; cap ML working set; bound logging; reject or defer extra task.
+[exit_code=0]

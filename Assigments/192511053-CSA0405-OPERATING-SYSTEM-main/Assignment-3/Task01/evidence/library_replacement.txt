@@ -1,0 +1,2 @@
+The shared object file libcrypto_demo.so was replaced in place with the crypto_v2 implementation. runtime_loader was not recompiled. Output:
+runtime output: QR]XGAR]@UVA

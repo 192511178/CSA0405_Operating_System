@@ -1,0 +1,39 @@
+PAGE SIZE 1024
+    0 -> page 0 offset    0 : physical 5120
+ 1500 -> page 1 offset  476 : physical 2524
+ 3100 -> page 3 offset   28 : physical 7196
+ 6200 -> page 6 offset   56 : physical 3128
+ 9000 -> page 8 offset  808 : invalid address
+ 2049 -> page 2 offset    1 : page fault
+Boundary checks:
+1023 -> page 0 offset 1023 : physical 6143
+1024 -> page 1 offset 0 : physical 2048
+8191 -> page 7 offset 1023 : page fault
+8192 -> page 8 offset 0 : invalid address
+PAGE SIZE 2048
+    0 -> page 0 offset    0 : physical 10240
+ 1500 -> page 0 offset 1500 : physical 11740
+ 3100 -> page 1 offset 1052 : physical 5148
+ 6200 -> page 3 offset   56 : physical 14392
+ 9000 -> page 4 offset  808 : physical 808
+ 2049 -> page 1 offset    1 : physical 4097
+Internal fragmentation for 100 seeded process sizes
+page_size=   1024 bytes total_waste=     46366 bytes average=463.7 bytes
+page_size=   4096 bytes total_waste=    206110 bytes average=2061.1 bytes
+page_size=2097152 bytes total_waste= 102810910 bytes average=1028109.1 bytes
+
+Page table entries (one-level, one entry per virtual page)
+32-bit: 1,048,576 entries; at 8 bytes/entry = 8,388,608 bytes (8.00 MiB)
+48-bit: 68,719,476,736 entries; at 8 bytes/entry = 549,755,813,888 bytes (524288.00 MiB)
+
+TLB effective access time, memory=100 ns, TLB lookup=10 ns
+hit=80%: 130.00 ns
+hit=95%: 115.00 ns
+hit=99%: 111.00 ns
+No TLB: 200 ns (two memory accesses)
+
+Linux page-size: 4096
+Maximum resident set size (kbytes): 111512
+Major (requiring I/O) page faults: 0
+Minor (reclaiming a frame) page faults: 29630
+[exit_code=0]

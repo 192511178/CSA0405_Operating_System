@@ -1,0 +1,12 @@
+touched=64 MiB minor_faults_delta=16384 major_faults_delta=0
+fork child wrote one private page (copy-on-write demonstration)
+sequential: minor_faults=8192 major_faults=0 pages=8192
+random: minor_faults=8192 major_faults=0 pages=8192
+Effective access time (P=page fault probability): EAT=(1-P)*100ns + P*(8ms)
+fault rate 1/1,000: 8099.90 ns
+fault rate 1/100,000: 180.00 ns
+fault rate 1/1,000,000: 108.00 ns
+maximum fault probability for <=10% slowdown: 1.2500156e-06 (about 1 in 799,990)
+If all references are resident: approximately 100 ns; demand paging adds fault-service cost.
+LRU faults by frame count: [(1, 20), (2, 17), (3, 12), (4, 8), (5, 7), (6, 6), (7, 6), (8, 6), (9, 6), (10, 6)]
+[exit_code=0]

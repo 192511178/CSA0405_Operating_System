@@ -1,0 +1,20 @@
+RAID capacity for six 4 TB disks (decimal TB)
+RAID 0                  : 24 TB usable (before filesystem overhead)
+RAID 1 (three mirrored pairs): 12 TB usable (before filesystem overhead)
+RAID 5                  : 20 TB usable (before filesystem overhead)
+RAID 10                 : 12 TB usable (before filesystem overhead)
+RAID 6                  : 16 TB usable (before filesystem overhead)
+
+Illustrative independent per-disk failure probability=2% per chosen interval
+RAID 1 (three mirror pairs) data-loss probability=0.119952%
+RAID 5 data-loss probability (2+ disks fail)=0.568712%
+
+Linux block devices (lsblk):
+NAME   SIZE TYPE FSTYPE MOUNTPOINTS
+vda     32G disk        
+pmem0 25.5G disk        
+
+Swap:
+(no active swap listed)
+Disk speed benchmark is not run automatically: use a dedicated test disk and fio; never benchmark by writing to a production device.
+[exit_code=0]

@@ -1,0 +1,5 @@
+Two simultaneous bank_dynamic processes were observed through /proc/<pid>/smaps_rollup. Shared_Clean is an aggregate process metric and does not identify exactly which library pages are shared; the mapped file ranges are shown in each process output.
+
+P1: smaps unavailable [Errno 3] No such process: '/proc/1859/smaps_rollup'
+
+P2: smaps unavailable [Errno 3] No such process: '/proc/1860/smaps_rollup'

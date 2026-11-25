@@ -1,0 +1,31 @@
+code offset=120: physical=10120
+data offset=1500: physical=21500
+stack offset=1023: physical=31023
+code offset=4096: SEGMENTATION FAULT (limit exceeded)
+data offset=2048: SEGMENTATION FAULT (limit exceeded)
+stack offset=0: physical=30000
+code offset=2048: physical=12048
+data offset=17: physical=20017
+
+/proc/self/maps (first 12 entries):
+556ae66d0000-556ae66d1000 r--p 00000000 00:1b 1835271                    /mnt/data/Assignment3_OS_Final/Task03/segments
+556ae66d1000-556ae66d2000 r-xp 00001000 00:1b 1835271                    /mnt/data/Assignment3_OS_Final/Task03/segments
+556ae66d2000-556ae66d3000 r--p 00002000 00:1b 1835271                    /mnt/data/Assignment3_OS_Final/Task03/segments
+556ae66d3000-556ae66d4000 r--p 00002000 00:1b 1835271                    /mnt/data/Assignment3_OS_Final/Task03/segments
+556ae66d4000-556ae66d5000 rw-p 00003000 00:1b 1835271                    /mnt/data/Assignment3_OS_Final/Task03/segments
+556b119e0000-556b11a01000 rw-p 00000000 00:00 0                          [heap]
+7fbe11572000-7fbe11575000 rw-p 00000000 00:00 0 
+7fbe11575000-7fbe1159d000 r--p 00000000 00:1b 9223372036855854193        /usr/lib/x86_64-linux-gnu/libc.so.6
+7fbe1159d000-7fbe11700000 r-xp 00028000 00:1b 9223372036855854193        /usr/lib/x86_64-linux-gnu/libc.so.6
+7fbe11700000-7fbe11756000 r--p 0018b000 00:1b 9223372036855854193        /usr/lib/x86_64-linux-gnu/libc.so.6
+7fbe11756000-7fbe1175a000 r--p 001e0000 00:1b 9223372036855854193        /usr/lib/x86_64-linux-gnu/libc.so.6
+7fbe1175a000-7fbe1175c000 rw-p 001e4000 00:1b 9223372036855854193        /usr/lib/x86_64-linux-gnu/libc.so.6
+child terminated by signal 11 (SIGSEGV)
+20 random segment requests: [46541, 23868, 55846, 89415, 10424, 13590, 74335, 16433, 52027, 80483, 11698, 70606, 32236, 9010, 15361, 60934, 58906, 13252, 35640, 15985]
+Allocated segments after freeing alternating IDs: 10
+Free holes: [(0, 46541), (70409, 55846), (215670, 10424), (239684, 74335), (330452, 52027), (462962, 11698), (545266, 32236), (586512, 15361), (662807, 58906), (734965, 35640), (786590, 1310562)]
+Total free: 1703576 bytes; largest hole: 1310562 bytes
+External-fragmentation indicator (1-largest/total): 0.2307
+Table comparison: 3 segments x 8-byte descriptors = 24 bytes
+2 MiB / 4 KiB = 512 page entries; at 8 bytes = 4096 bytes
+[exit_code=0]

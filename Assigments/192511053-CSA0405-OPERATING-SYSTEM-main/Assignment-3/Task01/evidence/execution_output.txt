@@ -1,0 +1,48 @@
+STATIC SIZE: 758952
+DYNAMIC SIZE: 16432
+DYNAMIC DEPENDENCIES:
+	linux-vdso.so.1 (0x00007f400a2af000)
+	libcrypto_demo.so => /mnt/data/Assignment3_OS_Final/Task01/./libcrypto_demo.so (0x00007f400a29d000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f400a098000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f400a2b1000)
+STATIC RUN:
+PID=2933
+INPUT=bank-transfer-123
+OUTPUT=8;41w.(;4)<?(wkhi
+MAPS (first 12 entries):
+00400000-00401000 r--p 00000000 00:1b 1835250                            /mnt/data/Assignment3_OS_Final/Task01/bank_static
+00401000-00477000 r-xp 00001000 00:1b 1835250                            /mnt/data/Assignment3_OS_Final/Task01/bank_static
+00477000-0049f000 r--p 00077000 00:1b 1835250                            /mnt/data/Assignment3_OS_Final/Task01/bank_static
+0049f000-004a4000 r--p 0009e000 00:1b 1835250                            /mnt/data/Assignment3_OS_Final/Task01/bank_static
+004a4000-004a6000 rw-p 000a3000 00:1b 1835250                            /mnt/data/Assignment3_OS_Final/Task01/bank_static
+004a6000-004ac000 rw-p 00000000 00:00 0 
+1da4c000-1da6e000 rw-p 00000000 00:00 0                                  [heap]
+7f32a372b000-7f32a372f000 r--p 00000000 00:00 0                          [vvar]
+7f32a372f000-7f32a3731000 r--p 00000000 00:00 0                          [vvar_vclock]
+7f32a3731000-7f32a3733000 r-xp 00000000 00:00 0                          [vdso]
+7ffe1a4c9000-7ffe1a4eb000 rw-p 00000000 00:00 0                          [stack]
+DYNAMIC RUN:
+PID=2934
+INPUT=bank-transfer-123
+OUTPUT=8;41w.(;4)<?(wkhi
+MAPS (first 12 entries):
+55ec4216c000-55ec4216d000 r--p 00000000 00:1b 1835252                    /mnt/data/Assignment3_OS_Final/Task01/bank_dynamic
+55ec4216d000-55ec4216e000 r-xp 00001000 00:1b 1835252                    /mnt/data/Assignment3_OS_Final/Task01/bank_dynamic
+55ec4216e000-55ec4216f000 r--p 00002000 00:1b 1835252                    /mnt/data/Assignment3_OS_Final/Task01/bank_dynamic
+55ec4216f000-55ec42170000 r--p 00002000 00:1b 1835252                    /mnt/data/Assignment3_OS_Final/Task01/bank_dynamic
+55ec42170000-55ec42171000 rw-p 00003000 00:1b 1835252                    /mnt/data/Assignment3_OS_Final/Task01/bank_dynamic
+55ec444bf000-55ec444e0000 rw-p 00000000 00:00 0                          [heap]
+7fd6f25cd000-7fd6f25d0000 rw-p 00000000 00:00 0 
+7fd6f25d0000-7fd6f25f8000 r--p 00000000 00:1b 9223372036855854193        /usr/lib/x86_64-linux-gnu/libc.so.6
+7fd6f25f8000-7fd6f275b000 r-xp 00028000 00:1b 9223372036855854193        /usr/lib/x86_64-linux-gnu/libc.so.6
+7fd6f275b000-7fd6f27b1000 r--p 0018b000 00:1b 9223372036855854193        /usr/lib/x86_64-linux-gnu/libc.so.6
+7fd6f27b1000-7fd6f27b5000 r--p 001e0000 00:1b 9223372036855854193        /usr/lib/x86_64-linux-gnu/libc.so.6
+7fd6f27b5000-7fd6f27b7000 rw-p 001e4000 00:1b 9223372036855854193        /usr/lib/x86_64-linux-gnu/libc.so.6
+RUNTIME LOAD:
+runtime output: 8;41w.(;4)<?(wkhi
+MISSING LIBRARY TEST:
+dlopen failed: ./missing.so: cannot open shared object file: No such file or directory
+STARTUP TIMING:
+static elapsed=0.00 s maxrss=616 KB
+dynamic elapsed=0.00 s maxrss=512 KB
+[exit_code=0]
